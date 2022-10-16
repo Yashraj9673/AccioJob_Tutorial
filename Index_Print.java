@@ -3,23 +3,21 @@ import java.util.*;
 public class Index_Print {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the array Size: ");
         int a = sc.nextInt();
-        int b = sc.nextInt();
+        System.out.print("Enter the array Elements: ");
+        int arr[] = new int[a];
 
-        int arr[][] = new int[a][b];
         for (int i = 0; i < a; i++) {
-            for (int j = 0; j < b; j++) {
-                arr[i][j] = sc.nextInt();
-            }
+            arr[i] = sc.nextInt();
         }
-
+        System.out.print("Enter the array Number: ");
         int x = sc.nextInt();
+        System.out.print("The array Num Index is: ");
 
         for (int i = 0; i < a; i++) {
-            for (int j = 0; j < b; j++) {
-                if (arr[i][j] == x) {
-                    System.out.print(arr[i][j]);
-                }
+            if (arr[i] == x) {
+                System.out.print(i);
             }
         }
     }
